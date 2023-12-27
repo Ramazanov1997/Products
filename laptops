@@ -30,7 +30,7 @@ rrrrrrr
         const isSelectedVideocard = selectedVideocard.length == 0 || selectedVideocard.includes(item.characteristic.Videocard)
 
 
-        return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model
+        return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model && isSelectedRam && isSelectedDisplay && isSelectedDisplay_hz && isSelectedVideocard
     })
 
     return (
