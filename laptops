@@ -35,15 +35,15 @@ rrrrrrr
 
     return (
         <div>
-                    <h2>Ssd</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((product) => (
+                    <h2>Product</h2>
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Product))).map((Product) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={product}
-                            checked={selectedSsd.includes(product)}
-                            onChange={() => handleCheckboxChange('product', ssd, setSelectedSsd)} />
+                            value={Product}
+                            checked={selectedProduct.includes(Product)}
+                            onChange={() => handleCheckboxChange('Product', Product, setSelectedProduct)} />
                         {product} GB
 
                     </li>
