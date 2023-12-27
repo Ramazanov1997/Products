@@ -51,13 +51,13 @@ rrrrrrr
                 </label>
             ))}А
             <h2>Ssd</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Ssd))).map((Ssd) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={ssd}
-                            checked={selectedSsd.includes(ssd)}
+                            value={Ssd}
+                            checked={selectedSsd.includes(Ssd)}
                             onChange={() => handleCheckboxChange('ssd', ssd, setSelectedSsd)} />
                         {ssd} GB
 
@@ -66,32 +66,32 @@ rrrrrrr
                 </label>
             ))}
             <h2>Processer Model</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer_model))).map((processer) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Processer_Model))).map((Processer_Model) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={processer}
-                            checked={selectedProcesser_model.includes(processer)}
-                            onChange={() => handleCheckboxChange('processer', processer, setSelectedProcesser_model)}
+                            value={Processer_Model}
+                            checked={selectedProcesser_model.includes(Processer_Model)}
+                            onChange={() => handleCheckboxChange('Processer_Model', Processer_Model, setSelectedProcesser_model)}
                         />
-                        {processer}
+                        {Processer_model}
                     </li>
                 </ul>
 
                 </label>
             ))}
             <h2>Processer Company</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer))).map((processer) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Processer))).map((Processer) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={processer}
-                            checked={selectedProcesser.includes(processer)}
-                            onChange={() => handleCheckboxChange('processer', processer, setSelectedProcesser)}
+                            value={Processer}
+                            checked={selectedProcesser.includes(Processer)}
+                            onChange={() => handleCheckboxChange('Processer', Processer, setSelectedProcesser)}
                         />
-                        {processer}
+                        {Processer}
                     </li>
                 </ul>
 
