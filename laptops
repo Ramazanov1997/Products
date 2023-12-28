@@ -23,13 +23,11 @@ const Laptops = () => {
 
     const handleCheckboxChange = (category, value, setSelectedCategories) => {
         if (selectedCategories.includes(value)) {
-            setSelectedCategories(selectedCategori
-                es.filter((c) => c !== value))
+            setSelectedCategories(selectedCategories.filter((c) => c !== value))
         } else {
             setSelectedCategories([...selectedCategories, value])
         }
     }
-rrrrrrr
     products_store.filteredProductsArr = msiLaptops.filter((item) => {
         const isSelectedSsd = selectedSsd.length == 0 || selectedSsd.includes(item.characteristic.ssd)
         const isSelectedProcesser = selectedProcesser.length == 0 || selectedProcesser.includes(item.characteristic.processer)
@@ -46,35 +44,34 @@ rrrrrrr
     return (
     <div>
         <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsProduct ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProduct(!activeCollapsProduct)}><h2>Product</h2><img src={activeCollapsProduct ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsProduct ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProduct(!activeCollapsProduct)}><h2>product</h2><img src={activeCollapsProduct ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsProduct ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Product))).map((Product) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.product))).map((product) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Product}
-                            checked={selectedProduct.includes(Product)}
-                            onChange={() => handleCheckboxChange('Product', Product, setSelectedProduct)} />
+                            value={product}
+                            checked={selectedproduct.includes(product)}
+                            onChange={() => handleCheckboxChange('Product', product, setSelectedproduct)} />
                         {product} 
 
                     </li>
                 </ul>
                 </label>
             ))}
-            <h2>Product</h2>
         </div>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>Ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
+
+        <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsSsd ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Ssd))).map((Ssd) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Ssd}
-                            checked={selectedSsd.includes(Ssd)}
-                            onChange={() => handleCheckboxChange('ssd', ssd, setSelectedSsd)} />
+                            value={ssd}
+                            checked={selectedssd.includes(ssd)}
+                            onChange={() => handleCheckboxChange('ssd', ssd, setSelectedssd)} />
                         {ssd} GB
 
                     </li>
@@ -82,123 +79,108 @@ rrrrrrr
                 </label>
              
             ))}
-            <h2>Ssd</h2>
         </div>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsProcesser_Model ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser_Model(!activeCollapsProcesser_Model)}><h2>Processer Model</h2><img src={activeCollapsProcesser_Model ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsProcesser_Model ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser_Model(!activeCollapsProcesser_Model)}><h2>processer Model</h2><img src={activeCollapsProcesser_Model ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsProcesser_Model ? "content activeContent" : "content"}>
-            <h2>Processer Model</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Processer_Model))).map((Processer_Model) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer_Model))).map((processer_model) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Processer_Model}
-                            checked={selectedProcesser_model.includes(Processer_Model)}
-                            onChange={() => handleCheckboxChange('Processer_Model', Processer_Model, setSelectedProcesser_model)}
+                            value={processer_model}
+                            checked={selectedprocesser_model.includes(processer_model)}
+                            onChange={() => handleCheckboxChange('processer_model', processer_model, setSelectedProcesser_model)}
                         />
-                        {Processer_model}
+                        {processer_model}
                     </li>
                 </ul>
                 </label>
             ))}
-            <h2>Processer Model</h2>
         </div>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>Processer</h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>processer company</h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsProcesser ? "content activeContent" : "content"}>
-            <h2>Processer Company</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Processer))).map((Processer) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer))).map((processer) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Processer}
-                            checked={selectedProcesser.includes(Processer)}
-                            onChange={() => handleCheckboxChange('Processer', Processer, setSelectedProcesser)}
+                            value={processer}
+                            checked={selectedprocesser.includes(processer)}
+                            onChange={() => handleCheckboxChange('processer', processer, setSelectedprocesser)}
                         />
-                        {Processer}
+                        {processer}
                     </li>
                 </ul>
 
                 </label>
             ))}
         </div>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsRam ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRam (!activeCollapsRam)}><h2>Ram</h2><img src={activeCollapsRam ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsRam ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRam (!activeCollapsRam)}><h2>ram</h2><img src={activeCollapsRam ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsRam ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Ram))).map((Ram) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ram))).map((ram) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Ram}
-                            checked={selectedRam.includes(Ram)}
-                            onChange={() => handleCheckboxChange('Ram', Ram, setSelectedRam)}
+                            value={ram}
+                            checked={selectedram.includes(ram)}
+                            onChange={() => handleCheckboxChange('ram', ram, setSelectedram)}
                         />
-                        {Ram}
+                        {ram}
                     </li>
                 </ul>
                 </label>
             ))}
-            <h2>Ram</h2>
         </div>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsDisplay ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay (!activeCollapsDisplay)}><h2>Display</h2><img src={activeCollapsDisplay ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsDisplay ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay (!activeCollapsDisplay)}><h2>display</h2><img src={activeCollapsDisplay ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsDisplay ? "content activeContent" : "content"}></div>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Display))).map((Display) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display))).map((display) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Display}
-                            checked={selectedDisplay.includes(Display)}
-                            onChange={() => handleCheckboxChange('Display', Display, setSelectedDisplay)}
+                            value={display}
+                            checked={selecteddisplay.includes(display)}
+                            onChange={() => handleCheckboxChange('display', display, setSelecteddisplay)}
                         />
-                        {Display}
+                        {display}
                     </li>
                 </ul>
                 </label>
             ))}
-            <h2>Display</h2>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsDisplay_hz ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay_hz (!activeCollapsDisplay_hz)}><h2>Display_hz</h2><img src={activeCollapsDisplay_hz ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsDisplay_hz ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay_hz (!activeCollapsDisplay_hz)}><h2>display_hz</h2><img src={activeCollapsDisplay_hz ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsDisplay_hz ? "content activeContent" : "content"}></div>   
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Display_hz))).map((Display_hz) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display_hz))).map((display_hz) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Display_hz}
-                            checked={selectedDisplay_hz.includes(Display_hz)}
-                            onChange={() => handleCheckboxChange('Display_hz', Display_hz, setSelectedDisplay_hz)}
+                            value={display_hz}
+                            checked={selecteddisplay_hz.includes(display_hz)}
+                            onChange={() => handleCheckboxChange('display_hz', display_hz, setSelecteddisplay_hz)}
                         />
-                        {Display_hz}
+                        {display_hz}
                     </li>
                 </ul>
                 </label>   
             ))}
-            <h2>Display_hz</h2>
-        <input onChange={(event) => setValue(event.target.value)}/>
-        <button class={activeCollapsVideocard ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsVideocard (!activeCollapsVideocard)}><h2>Videocard</h2><img src={activeCollapsVideocard ? opened_pointer : closed_pointer} /></button>
+        <button class={activeCollapsVideocard ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsVideocard (!activeCollapsVideocard)}><h2>videocard</h2><img src={activeCollapsVideocard ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsVideocard ? "content activeContent" : "content"}></div>
-            <h2>Videocard</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Videocard))).map((Videocard) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.videocard))).map((videocard) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
-                            value={Display_hz}
-                            checked={selectedVideocard.includes(Videocard)}
-                            onChange={() => handleCheckboxChange('Videocard', Videocard, setSelectedVideocard)}
+                            value={display_hz}
+                            checked={selectedvideocard.includes(videocard)}
+                            onChange={() => handleCheckboxChange('videocard', videocard, setSelectedvideocard)}
                         />
-                        {Videocard}
+                        {videocard}
                     </li>
                 </ul>
 
                 </label>
             ))}
-            <h2>Videocard</h2>
             {/* {filteredLaptops.map((laptop) => <div>
                 <li key={laptop.id}>
                     <div>{laptop.name}</div>
