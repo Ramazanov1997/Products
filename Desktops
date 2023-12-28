@@ -34,7 +34,7 @@ const DekstoFilter = () => {
 
     return (
         <div>
-                    <h2>Product</h2>
+            <h2>Product</h2>
             {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Product))).map((Product) => (
                 <label><ul>
                     <li>
@@ -43,7 +43,7 @@ const DekstoFilter = () => {
                             value={Product}
                             checked={selectedProduct.includes(Product)}
                             onChange={() => handleCheckboxChange('Product', Product, setSelectedProduct)} />
-                        {Product} 
+                        {Product}
 
                     </li>
                 </ul>
@@ -97,13 +97,13 @@ const DekstoFilter = () => {
                 </label>
             ))}
             <h2>Motherboard</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Motherboard))).map((Motherboard) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.motherboard))).map((Motherboard) => (
                 <label><ul>
                     <li>
                         <input
                             type="checkbox"
                             value={Motherboard}
-                            checked={selectedProcesser.includes(Motherboard)}
+                            checked={selectedMotherboard.includes(Motherboard)}
                             onChange={() => handleCheckboxChange('Motherboard', Motherboard, setSelectedMotherboard)}
                         />
                         {Motherboard}
@@ -113,7 +113,7 @@ const DekstoFilter = () => {
                 </label>
             ))}
             <h2>Ram</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Ram))).map((Ram) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ram))).map((Ram) => (
                 <label><ul>
                     <li>
                         <input
@@ -129,7 +129,7 @@ const DekstoFilter = () => {
                 </label>
             ))}
             <h2>Videocard</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Videocard))).map((Videocard) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.videocard))).map((Videocard) => (
                 <label><ul>
                     <li>
                         <input
@@ -145,7 +145,7 @@ const DekstoFilter = () => {
                 </label>
             ))}
             <h2>Block_power</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Block_power))).map((Block_power) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.block_power))).map((Block_power) => (
                 <label><ul>
                     <li>
                         <input
@@ -161,7 +161,7 @@ const DekstoFilter = () => {
                 </label>
             ))}
             <h2>Type_ram</h2>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.Type_ram))).map((Type_ram) => (
+            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.type_ram))).map((Type_ram) => (
                 <label><ul>
                     <li>
                         <input
